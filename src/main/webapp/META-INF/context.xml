@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+    <Resource name="jdbc/autenticacion"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/autenticacion_db?serverTimezone=UTC"
+              username="autenticacionweb"
+              password="demo"
+              maxTotal="10" 
+              maxIdle="5"
+              maxWaitMillis="5000"/>
+</Context>

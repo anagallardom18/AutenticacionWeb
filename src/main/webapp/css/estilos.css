@@ -1,0 +1,176 @@
+/* ==========================================================================
+   VARIABLES DE COLOR
+   ========================================================================== */
+:root {
+  --color-A: #D60270;      /* Magenta */
+  --color-B: #9B4F96;      /* Violeta */
+  --color-C: #0038A8;      /* Azul */
+  
+  --primary: var(--color-B); 
+  --secondary: #2d3436;
+  --accent-gradient: linear-gradient(135deg, var(--color-A), var(--color-B), var(--color-C));
+  
+  --background: #f4f7f9; 
+  --card-bg: #ffffff;
+  
+  /* Colores de estado suaves para mejor legibilidad */
+  --success-bg: #d4edda;
+  --success-text: #155724;
+  --success-border: #c3e6cb;
+}
+
+/* ==========================================================================
+   ESTILOS GLOBALES
+   ========================================================================== */
+body {
+  font-family: "Inter", -apple-system, system-ui, sans-serif;
+  background-color: var(--background);
+  background-image: linear-gradient(180deg, rgba(155, 79, 150, 0.05) 0%, transparent 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  width: 95%;
+  max-width: 420px; 
+}
+
+/* ==========================================================================
+   TARJETAS (CARDS)
+   ========================================================================== */
+.login-card {
+  background: var(--card-bg);
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border-left: 6px solid var(--color-B);
+  box-shadow: 0 10px 30px rgba(0, 56, 168, 0.08);
+}
+
+.login-card:nth-of-type(1) { border-left-color: var(--color-A); }
+.login-card:nth-of-type(2) { border-left-color: var(--color-B); }
+
+.login-card h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--color-C);
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   FORMULARIOS e INPUTS
+   ========================================================================== */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-B);
+  box-shadow: 0 0 0 3px rgba(155, 79, 150, 0.15);
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* ==========================================================================
+   BOTONES
+   ========================================================================== */
+.btn-primary, .btn-secondary, .btn-accent {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--color-B);
+  color: white;
+}
+
+.btn-accent {
+  background-color: var(--color-C);
+  color: white;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-accent:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   MENSAJES Y UTILIDADES
+   ========================================================================== */
+.error-msg {
+  color: white;
+  background: var(--color-A);
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.success-msg {
+  color: var(--success-text);
+  background-color: var(--success-bg);
+  border: 1px solid var(--success-border);
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.input-otp {
+  border: 2px solid var(--color-B) !important;
+  color: var(--color-A);
+  font-weight: bold;
+  letter-spacing: 8px;
+  text-align: center;
+  font-size: 1.5rem !important;
+}
+
+.qr-container { display: flex; justify-content: center; margin: 20px 0; }
+.qr-img { max-width: 200px; border: 3px solid var(--color-C); border-radius: 8px; }
+
+.text-center { text-align: center; }
+.text-muted { color: #666; font-size: 0.95rem; }
+.margin-top-md { margin-top: 25px; }
+.no-decoration { text-decoration: none; }
+
+.index-actions { display: flex; flex-direction: column; gap: 12px; }
+.separator-text { text-align: center; margin: 10px 0; color: var(--color-B); font-weight: bold; font-size: 0.8em; }
+.footer-actions { text-align: center; margin-top: 20px; }
+
+.accent-link { color: var(--color-C); font-weight: bold; text-decoration: none; }
+.accent-link:hover { text-decoration: underline; }
+.divider { margin: 0 10px; color: #ccc; }
