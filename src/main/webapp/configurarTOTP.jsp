@@ -14,7 +14,7 @@
 <div class="login-container">
 
     <div class="login-card">
-        <h2>Configurar Doble Factor</h2>
+        <h2>Configurar TOTP</h2>
 
         <% if (request.getAttribute("error") != null) { %>
             <div class="error-msg">
