@@ -71,6 +71,7 @@ Por motivos de seguridad, la clave de cifrado no está escrita en el código fue
 Debe configurarse de forma externa: 
 1. Defina una variable de entorno en su sistema o IDE (Eclipse/Tomcat) llamada: AES_KEY_APP 
 2. El valor debe ser una cadena alfanumérica de **exactamente 32 caracteres** (esta será la llave que cifra y descifra todo el sistema).
+3. Se configura en el entorno de ejecución (Eclipse / Tomcat → Run Configurations → Environment)
 
 #### C. Cifrado de credenciales y actualización de BD 
 Antes de guardar la contraseña de Google en la base de datos, debe cifrarla usando el módulo de seguridad del proyecto: 
