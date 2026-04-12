@@ -75,7 +75,7 @@ Debe configurarse de forma externa:
 #### C. Cifrado de credenciales y actualización de BD 
 Antes de guardar la contraseña de Google en la base de datos, debe cifrarla usando el módulo de seguridad del proyecto: 
 1. Configure la variable AES_KEY_APP en las *Run Configurations* de la clase GeneradorPassword.java. 
-2. Ejecute dicha clase e introduzca su contraseña de 16 caracteres de Google cuando se le solicite (o configúrela en el código del Main). 
+2. Ejecute dicha clase e introduzca su contraseña de 16 caracteres de Google cuando se le solicite 
 3. El programa devolverá un **Token cifrado** (ej: 7jHk2...). Copie este valor. 
 4. Actualice la base de datos con el siguiente script SQL:
 
